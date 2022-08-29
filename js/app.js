@@ -1,7 +1,8 @@
 const loadAllMeals = () => {
   fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=b")
     .then((res) => res.json())
-    .then((data) => displayMeals(data.meals));
+    .then((data) => displayMeals(data.meals))
+    .catch((error) => console.log(error));
 };
 
 const displayMeals = (meals) => {
